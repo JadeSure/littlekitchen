@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-full
+    transition-all duration-300 transform hover:scale-105 hover:shadow-2xl
+    active:scale-95 text-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-accent hover:bg-accent-dark text-white font-semibold py-3 px-6 rounded-full
+    transition-all duration-300 transform hover:scale-105 hover:shadow-xl
+    active:scale-95;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .star-icon {
+    @apply text-yellow-400;
+  }
+}
+
+/* Custom decorative elements */
+.food-pattern {
+  background-image:
+    radial-gradient(circle at 20px 20px, rgba(220, 38, 38, 0.05) 2px, transparent 0),
+    radial-gradient(circle at 80px 80px, rgba(251, 146, 60, 0.05) 2px, transparent 0);
+  background-size: 100px 100px;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
